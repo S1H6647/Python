@@ -2,11 +2,18 @@
 
 string = "hello world"
 
-splitString = string.split(" ")
-print(splitString)
+words = string.split(" ")
+words[0] = words[0].capitalize()
+words[-1] = words[-1].lower()
+print(" ".join(words))
 
-firstWord = splitString[:-1] , splitString[1].upper()
+# firstWord = splitString[:-1] , splitString[1].upper()
 # secondWord = splitString[1].capitalize() + splitString[1][:-1].upper() 
 
 # finalWord = firstWord + secondWord
-print(firstWord)
+
+# words = string.split("") 
+# words[0] = words[0].upper()
+# words[-1] = words[-1].upper() 
+# printf(" ".join(words))
+
