@@ -1,19 +1,15 @@
 # Python program to capitalize the first and last character of each word in a string
 
-string = "hello world"
+def convert(input):
+    words = input.split() 
+    capitalized_words = [capitalize_first_last(word) for word in words]
+    return ' '.join(capitalized_words)
 
-words = string.split(" ")
-words[0] = words[0].capitalize()
-words[-1] = words[-1].lower()
-print(" ".join(words))
+def capitalize_first_last(word):
+    if len(word) > 1:
+        return word[0].upper() + word[1:-1] + word[-1].upper()
+    return word.upper()
 
-# firstWord = splitString[:-1] , splitString[1].upper()
-# secondWord = splitString[1].capitalize() + splitString[1][:-1].upper() 
-
-# finalWord = firstWord + secondWord
-
-# words = string.split("") 
-# words[0] = words[0].upper()
-# words[-1] = words[-1].upper() 
-# printf(" ".join(words))
-
+input= input("Enter a string: ")
+output = convert(input) 
+print(output)
